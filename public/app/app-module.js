@@ -48,11 +48,6 @@ $(function(){
     };
   };
 
-  $("#menu-toggle").click(function(e) {
-    e.preventDefault();
-    $("#wrapper").toggleClass("toggled");
-  });
-
   // bootstrap the app to the HTML element.
   angular.bootstrap( document.getElementsByTagName("html")[0], [ appName ]);
 })

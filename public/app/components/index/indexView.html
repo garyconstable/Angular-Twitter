@@ -1,23 +1,26 @@
 <div id="wrapper">
   <aside id="sidebar-wrapper">
     <img src="/assets/images/logo.png" alt="Supertux logo" class="logo" />
-    <h1 class="logo-text">Twitter Search</h1>
+    <h1 class="logo-text">The Imperial Tux Empire</h1>
     <!-- search -->
     <form class="form">
       <div class="col-xs-12">
-        <div class="form-group">
+        <div class="form-group relative">
           <input ng-model="username" type="text" class="form-control" placeholder="Search e.g. @twitter" />
         </div>
       </div>
       <div class="col-xs-12">
         <div class="form-group">
-          <button class="btn btn-block btn-sidebar" ng-click="clear()">Clear</button>
+          <button class="btn btn-block btn-sidebar" ng-click="clear()">
+            <i class="fa fa-refresh" aria-hidden="true"></i>
+          </button>
         </div>
       </div>
       <div class="col-xs-12">
         <div class="form-group">
           <button class="btn btn-block btn-sidebar" ng-click="submit()">
-            Search <img src="/assets/images/default.gif" class="spinner" />
+            <i class="fa fa-search" aria-hidden="true"></i>
+            <img src="/assets/images/default.gif" class="spinner" />
           </button>
         </div>
       </div>
@@ -29,18 +32,23 @@
     <!-- search -->
     <div class="row">
       <div class="col-xs-12 top-search">
-        <h1 class="logo-text small"><img src="/assets/images/logo.png" alt="Supertux logo" class="logo" /> Twitter Search</h1>
+        <h1 class="logo-text small">
+          <img src="/assets/images/logo.png" alt="Supertux logo" class="logo" />
+        </h1>
         <form class="form">
           <div class="form-group row">
             <div class="col-xs-12 search-12">
-              <input ng-model="username" type="text" class="form-control" placeholder="Username E.G. @twitter" />
+              <input ng-model="username" type="text" class="form-control" placeholder="Search e.g. @twitter" />
             </div>
-            <div class="col-xs-12 search-3">
-              <button class="btn btn-block btn-sidebar" ng-click="clear()">Clear</button>
+            <div class="col-xs-12 search-3 one">
+              <button class="btn btn-block btn-sidebar" ng-click="clear()">
+                <i class="fa fa-refresh" aria-hidden="true"></i>
+              </button>
             </div>
-            <div class="col-xs-12 search-3">
+            <div class="col-xs-12 search-3 two">
               <button class="btn btn-block btn-sidebar" ng-click="submit()">
-                Search <img src="/assets/images/default.gif" class="spinner" />
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <img src="/assets/images/default.gif" class="spinner" />
               </button>
             </div>
           </div>

@@ -13,12 +13,13 @@ $font-tux: "TuxedoVerticle, Open Sans";
 @import "_bootstrap";
 @import "partials/_sidebar";
 
+// https://color.adobe.com/Flat-UI-color-theme-2469224/
+// 
 $col_1 : #2C3E50; //blue
 $col_2 : #E74C3C; //red
 $col_3 : #ECF0F1; //white
 $col_4 : #3498DB; //blue
 $col_5 : #2980B9; //blue
-
 
 body{
   background: $col_1;
@@ -31,33 +32,40 @@ body{
 }
 .logo{
   display: block;
-  width: 73%;
+  width: 62%;
   margin: 30px auto 0 auto;
-  //background: $col_3;
-  //border: solid 6px $col_1;
-  //border-radius: 100%;
   padding: 10px;
 }
 .logo-text{
   font-family: $font-tux;
   text-align: center;
-  margin: 0 0 50px 0;
-  font-size: 32px;
-  line-height: calc(32px * 1.5);
+  margin: 10px auto 31px auto;
+  font-size: 30px;
+  line-height: calc(24px * 1.5);
   color: #2c3e50;
+  max-width: 82%;
   &.small{
-    text-align: left;
-    font-size: 28px;
-    line-height: 74px;
+    display: none;
+    @media only screen and (min-width : 480px) {
+      display:block;
+    }
+    text-align: right;
+    font-size: 0;
+    line-height: 0;
     margin: -10px 0 0 0;
+    float: left;
+    font-size: 0;
     img{
       float: left;
-      width: 70px;
-      margin: 0 0 0 -10px;
+      width: 41px;
+      margin: 8px 0 0 0px;
+      padding: 0;
     }
   }
 }
 .top-search{
+  position: fixed;
+  z-index: 10;
   background: $col_4;
   clear: left;
   padding: 12px 15px 0 15px;
@@ -84,11 +92,14 @@ body{
     line-height: calc(16px * 1.5);
     .inner{
       word-wrap: break-word;
-      margin: 0 10px 20px 10px;
+      margin: 0 0 20px 0;
       padding: 20px;
       border: solid 3px $col_4;
       border-radius: 3px;
       background: $col_3;
+      @media only screen and (min-width : 768px) {
+        margin: 0 10px 20px 10px;
+      }
     }
   }
 }
@@ -117,7 +128,7 @@ input[type="text"]{
   border: solid 3px #ecf0f1;
   font-size: 16px;
   line-height: calc(45px * 1.5);
-  padding: 6px 12px;
+  padding: 6px 42px 6px 12px;
   height: 40px;
   color: black;
   line-height: normal;
@@ -126,9 +137,6 @@ input[type="text"]{
   -webkit-box-shadow: none !important;
 }
 .supertux-container{
-  position: absolute;
-  left: 10%;
-  top: 126px;
   color: black;
   color: rgba(0,0,0,0.52);
   border: dashed;
@@ -139,6 +147,13 @@ input[type="text"]{
   line-height: calc(32px * 1.5);
   border-radius: 24px;
   width: 80%;
+  margin: 30px auto 30px auto;
+  @media only screen and (min-width : 768px) {
+    top: 126px;
+    margin-bottom: 30px;
+    position: absolute;
+    left: 10%;
+  }
   .supertux{
     opacity: 0.3;
     width: 130px;
@@ -147,16 +162,68 @@ input[type="text"]{
     padding: 10px 0 0 0;
     width: 70%;
     margin: auto;
-    line-height: 42px;
+    font-size: 21px;
+    line-height: calc(21px * 1.5);
+    @media only screen and (min-width : 768px) {
+      font-size: 42px;
+      line-height: calc(42px * 1.5);
+    }
   }
 }
 .search-12{
+  input{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 2px;
+    border: solid 2px white;
+    padding: 10px;
+    line-height: 20px;
+    text-align: left;
+    background: #ecf0f1;
+    outline: none;
+    height: 39px;
+    font-size: 12px;
+  }
+  padding-left: 10px;
+  padding-right: 0;
+  width:58%;
   @media only screen and (min-width : 480px) {
-    width:50%;
+    width:37%;
   }
 }
 .search-3{
+  width:20%;
   @media only screen and (min-width : 480px) {
     width:25%;
+  }
+  &.one{
+    padding-right: 0;
+    padding-left: 10px;
+  }
+  &.two{
+    padding-left: 10px;
+    padding-right: 0;
+  }
+}
+.relative{
+  position: relative;
+}
+.magnify{
+  position: absolute;
+  top: 8px;
+  right: 13px;
+  font-size: 18px;
+  color: rgba($col-5, 0.6);
+}
+.form-group{
+  &.row{
+      margin-bottom: 3px;
+  }
+}
+#page-content-wrapper{
+  padding-top: 87px;
+  @media only screen and (min-width : 768px) {
+    padding-top: 15px;
   }
 }

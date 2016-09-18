@@ -10,7 +10,7 @@
 var indexController = function($scope, $http)
 {
 	$scope.tweets = [];
-	$scope.username = '@Gary_Constable';
+	$scope.username = '';
 	$scope.instructions = 'To begin, enter a name into the search box.'
 	$scope.notFound = 'Oops, please try another user.'
 	/**
@@ -56,7 +56,7 @@ var indexController = function($scope, $http)
 			$('.spinner').css({display: 'none'});
       console.log(response);
 			if(typeof response.data !== "undefined"){
-				if(Array.isArray(response.data)){
+				if(Array.isArray(response.data) && response.data.length >= 1){
 					$('.supertux-container').hide();
 					$scope.tweets = response.data;
 				}else{

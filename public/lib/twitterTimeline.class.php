@@ -1,5 +1,13 @@
 <?php
-
+/**
+ * Twitter Timeline - Timeline Status search
+ * --
+ * @category Twitter
+ * @package public/lib/
+ * @author Gary Constable <garyconstable80@gmail.com>
+ * @copyright (c) 2016, Gary Constable
+ * @version 0.1
+ */
 class twitterTimeline extends twitterApp
 {
   const ENDPOINT = 'https://api.twitter.com/1.1/statuses/user_timeline.json';

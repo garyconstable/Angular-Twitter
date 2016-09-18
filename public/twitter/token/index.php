@@ -1,6 +1,5 @@
 <?php
 
-
 require_once( rtrim($_SERVER['DOCUMENT_ROOT'], '/') . '/lib/twitterApp.class.php'  );
 require_once( rtrim($_SERVER['DOCUMENT_ROOT'], '/') . '/lib/twitterAuth.class.php'  );
 $token_file = rtrim($_SERVER['DOCUMENT_ROOT'], '/') . '/twitter/token/token.json';

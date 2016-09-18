@@ -1,5 +1,13 @@
 <?php
-
+/**
+ * Twitter App
+ * --
+ * @category Twitter
+ * @package public/lib/
+ * @author Gary Constable <garyconstable80@gmail.com>
+ * @copyright (c) 2016, Gary Constable
+ * @version 0.1
+ */
 class twitterApp
 {
   /**
