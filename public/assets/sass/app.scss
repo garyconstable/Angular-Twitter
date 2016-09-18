@@ -68,11 +68,11 @@ body{
     margin-bottom: 10px;
   }
   .col-xs-12{
-      &:last-of-type{
-        button{
-          margin-bottom: 0px;
-        }
+    &:last-of-type{
+      button{
+        margin-bottom: 0px;
       }
+    }
   }
 }
 .masonry-container{
@@ -83,6 +83,7 @@ body{
     font-size: 16px;
     line-height: calc(16px * 1.5);
     .inner{
+      word-wrap: break-word;
       margin: 0 10px 20px 10px;
       padding: 20px;
       border: solid 3px $col_4;
@@ -116,9 +117,13 @@ input[type="text"]{
   border: solid 3px #ecf0f1;
   font-size: 16px;
   line-height: calc(45px * 1.5);
-  /* background: #2980b9; */
   padding: 6px 12px;
   height: 40px;
+  color: black;
+  line-height: normal;
+  text-align: left;
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
 }
 .supertux-container{
   position: absolute;

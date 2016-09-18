@@ -36,8 +36,8 @@ class twitterApp
    */
   public static function getInstance()
   {
-    if (null === static::$instance) {
-      static::$instance = new static();
+    if (!isset(static::$instance)) {
+      static::$instance = new static;
     }
     return static::$instance;
   }
