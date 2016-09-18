@@ -1,0 +1,157 @@
+
+@font-face {
+  font-family: 'TuxedoVerticle';
+  src: url('/assets/fonts/TuxedoVerticle.woff') format('woff'),
+       url('/assets/fonts/TuxedoVerticle.ttf') format('truetype'),
+       url('/assets/fonts/TuxedoVerticle.svg#TuxedoVerticle') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$font-tux: "TuxedoVerticle, Open Sans";
+
+@import "_bootstrap";
+@import "partials/_sidebar";
+
+$col_1 : #2C3E50; //blue
+$col_2 : #E74C3C; //red
+$col_3 : #ECF0F1; //white
+$col_4 : #3498DB; //blue
+$col_5 : #2980B9; //blue
+
+
+body{
+  background: $col_1;
+}
+.tux{
+  font-family: $font-tux;
+}
+#sidebar-wrapper{
+  background: $col_4;
+}
+.logo{
+  display: block;
+  width: 73%;
+  margin: 30px auto 0 auto;
+  //background: $col_3;
+  //border: solid 6px $col_1;
+  //border-radius: 100%;
+  padding: 10px;
+}
+.logo-text{
+  font-family: $font-tux;
+  text-align: center;
+  margin: 0 0 50px 0;
+  font-size: 32px;
+  line-height: calc(32px * 1.5);
+  color: #2c3e50;
+  &.small{
+    text-align: left;
+    font-size: 28px;
+    line-height: 74px;
+    margin: -10px 0 0 0;
+    img{
+      float: left;
+      width: 70px;
+      margin: 0 0 0 -10px;
+    }
+  }
+}
+.top-search{
+  background: $col_4;
+  clear: left;
+  padding: 12px 15px 0 15px;
+  @media only screen and (min-width : 768px) {
+    display:none;
+  }
+  input, button{
+    margin-bottom: 10px;
+  }
+  .col-xs-12{
+      &:last-of-type{
+        button{
+          margin-bottom: 0px;
+        }
+      }
+  }
+}
+.masonry-container{
+  .tile{
+    padding:0;
+    margin: 0;
+    font-family: $font-tux;
+    font-size: 16px;
+    line-height: calc(16px * 1.5);
+    .inner{
+      margin: 0 10px 20px 10px;
+      padding: 20px;
+      border: solid 3px $col_4;
+      border-radius: 3px;
+      background: $col_3;
+    }
+  }
+}
+.btn-sidebar{
+  border: solid 2px $col_3;
+  font-family: $font-tux;
+  font-size: 16px;
+  line-height: calc(16px * 1.5);
+  background: $col_5;
+  color: $col_3;
+  text-transform: uppercase;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+  &:active,  &:hover,  &:focus{
+    color: $col_1;
+    background: $col_3;
+    border: solid 2px $col_1;
+  }
+}
+.spinner{
+  display:none;
+  width: 19px;
+  margin: -4px 0 0 0;
+}
+input[type="text"]{
+  border: solid 3px #ecf0f1;
+  font-size: 16px;
+  line-height: calc(45px * 1.5);
+  /* background: #2980b9; */
+  padding: 6px 12px;
+  height: 40px;
+}
+.supertux-container{
+  position: absolute;
+  left: 10%;
+  top: 126px;
+  color: black;
+  color: rgba(0,0,0,0.52);
+  border: dashed;
+  padding: 6%;
+  text-align: center;
+  font-family: "TuxedoVerticle, Open Sans";
+  font-size: 32px;
+  line-height: calc(32px * 1.5);
+  border-radius: 24px;
+  width: 80%;
+  .supertux{
+    opacity: 0.3;
+    width: 130px;
+  }
+  p{
+    padding: 10px 0 0 0;
+    width: 70%;
+    margin: auto;
+    line-height: 42px;
+  }
+}
+.search-12{
+  @media only screen and (min-width : 480px) {
+    width:50%;
+  }
+}
+.search-3{
+  @media only screen and (min-width : 480px) {
+    width:25%;
+  }
+}

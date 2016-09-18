@@ -1,0 +1,73 @@
+<div id="wrapper">
+  <aside id="sidebar-wrapper">
+    <img src="/assets/images/logo.png" alt="Supertux logo" class="logo" />
+    <h1 class="logo-text">Twitter Search</h1>
+    <!-- search -->
+    <form class="form">
+      <div class="col-xs-12">
+        <div class="form-group">
+          <input ng-model="username" type="text" class="form-control" placeholder="Search e.g. @twitter" />
+        </div>
+      </div>
+      <div class="col-xs-12">
+        <div class="form-group">
+          <button class="btn btn-block btn-sidebar" ng-click="clear()">Clear</button>
+        </div>
+      </div>
+      <div class="col-xs-12">
+        <div class="form-group">
+          <button class="btn btn-block btn-sidebar" ng-click="submit()">
+            Search <img src="/assets/images/default.gif" class="spinner" />
+          </button>
+        </div>
+      </div>
+    </form>
+    <!-- /search -->
+  </aside>
+  <!-- /sidebar-->
+  <div class="container">
+    <!-- search -->
+    <div class="row">
+      <div class="col-xs-12 top-search">
+        <h1 class="logo-text small"><img src="/assets/images/logo.png" alt="Supertux logo" class="logo" /> Twitter Search</h1>
+        <form class="form">
+          <div class="form-group row">
+            <div class="col-xs-12 search-12">
+              <input ng-model="username" type="text" class="form-control" placeholder="Username E.G. @twitter" />
+            </div>
+            <div class="col-xs-12 search-3">
+              <button class="btn btn-block btn-sidebar" ng-click="clear()">Clear</button>
+            </div>
+            <div class="col-xs-12 search-3">
+              <button class="btn btn-block btn-sidebar" ng-click="submit()">
+                Search <img src="/assets/images/default.gif" class="spinner" />
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- /search -->
+  </div>
+  <main id="page-content-wrapper">
+    <div class="container-fluid">
+      <!-- display -->
+      <div class="row">
+        <div class="supertux-container">
+          <img src="/assets/images/supertux.png" class="supertux" />
+          <p>{{instructions}}</p>
+        </div>
+        <div class="masonry-container" masonry='{"transitionDuration" : "0.4s" , "itemSelector" : ".tile"}'>
+          <article masonry-tile ng-repeat="item in tweets" class="col-md-4 col-sm-6 tile">
+            <div class="inner">
+            {{ item.text }}
+            </div>
+          </article>
+        </div>
+      </div>
+      <!-- /display -->
+    </div>
+  </main>
+  <!-- /content -->
+</div>
+<!-- /wrapper -->

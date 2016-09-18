@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'TuxedoVerticle';
+  src: url('TuxedoVerticle.woff') format('woff'),
+       url('TuxedoVerticle.ttf') format('truetype'),
+       url('TuxedoVerticle.svg#TuxedoVerticle') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ufonts.com_tuxedo-verticle';
+  src: url('ufonts.com_tuxedo-verticle.eot');
+  src: url('ufonts.com_tuxedo-verticle.woff2') format('woff2'),
+       url('ufonts.com_tuxedo-verticle.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+

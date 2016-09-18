@@ -1,0 +1,9 @@
+/public/assets/.sass-cache/*
+/public/assets/css/*.css
+/public/assets/js/*.js
+
+# Include these for now - so you don't have to build everything :)
+#/public/index.html
+#/public/build/*.css
+#/public/build/*.js
+#/public/build/rev-manifest.json
