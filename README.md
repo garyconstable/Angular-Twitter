@@ -1,4 +1,4 @@
-### The Imperial Tux Empire - Twitter Search
+### Angular (v1) App - Twitter Search
 
 #### Technologies Used:
 + Angular (v1)
