@@ -12,13 +12,13 @@
 #### Hosting
 To host this app, please place the public folder on a php server with php version 5.6 or greater.
 
-####Build Production
+#### Build Production
 This will add a revision number to the JS and CSS files.
 ```
 gulp
 ```
 
-####Build development
+#### Build development
 This will allow you to 'SASS Watch' and edit the styles.
 ```
 gulp dev
